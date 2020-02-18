@@ -8,7 +8,7 @@ subtitle: ''
 description: ''
 keywords:
 author: superchester
-language: zh-CN
+language: zh-Hans
 timezone: ''
 
 # URL
@@ -61,7 +61,9 @@ prism_plugin:
 #搜索配置hexo-generator-search
 search:
   path: search.xml
-  field: post   
+  field: post
+  format: html
+  limit: 10000
 
 #中文连接转拼音
 permalink_pinyin:
@@ -80,6 +82,8 @@ feed:
   content_limit_delim: ' '
   order_by: -date
 
+# mouse click effect: fireworks | explosion | love | text 
+cursor_effect: explosion
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -120,10 +124,10 @@ exclude:
 ignore:
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
+Plugins: hexo-generator-sitemap
 ## Themes: https://hexo.io/themes/
 #hexo-theme-matery
-theme: hexo-theme-matery
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
