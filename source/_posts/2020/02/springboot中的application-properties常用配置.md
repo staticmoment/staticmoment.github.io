@@ -1,6 +1,7 @@
 ---
 title: SpringBoot中的application.properties常用配置
 date: 2020-02-20 20:00:08
+description: 列举常用的application配置
 categories:
 - java
 tags:

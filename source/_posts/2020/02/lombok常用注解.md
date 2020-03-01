@@ -1,13 +1,14 @@
 ---
 title: lombok常用注解
 date: 2020-02-21 02:34:30
+description: 列举一些常用的lombok注解
 categories:
 - java
 tags:
 - 工具
 ---
 
-### 
+### 注解详解
 
 **@Data**
 

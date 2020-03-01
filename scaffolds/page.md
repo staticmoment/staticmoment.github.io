@@ -1,6 +1,5 @@
 ---
-​---
-title: {{ title }}
+​title: {{ title }}
 date: {{ date }}
-​---
+​type: 
 ---

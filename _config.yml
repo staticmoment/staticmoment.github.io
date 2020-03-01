@@ -4,7 +4,7 @@
 
 # Site
 title: superchester
-subtitle: ''
+subtitle: '写一些笔记'
 description: ''
 keywords:
 author: superchester
@@ -41,13 +41,13 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
@@ -55,7 +55,7 @@ highlight:
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
   theme: 'tomorrow'
-  line_number: false    # default false
+  line_number: default    # default false
   custom_css: 
 
 #搜索配置hexo-generator-search
@@ -64,6 +64,7 @@ search:
   field: post
   format: html
   limit: 10000
+  content: true
 
 #中文连接转拼音
 permalink_pinyin:
@@ -105,6 +106,7 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -135,9 +137,49 @@ Plugins: hexo-generator-sitemap
 #hexo-theme-matery
 theme: next
 
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repository: git@github.com:superchester/superchester.github.io.git
   branch: master
+
+vendors:
+  pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
+  pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.min.css
+
+
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js'
+    - '**/clicklove.js'
+    - '**/firework.js'
+    - '**/local-search.js'
+    - '**/next-boot.js'
+    - '**/utils.js'
+    - '**/muse.js'
+    - '**/motion.js'
+    - '**/pisces.js'
+    - '**/bookmark.js'
+    - '**/algolia-search.js'
+    - '**/gulpfile.js'
+    
