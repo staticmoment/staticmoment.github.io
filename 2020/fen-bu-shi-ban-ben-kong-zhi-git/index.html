@@ -111,7 +111,7 @@
 </nav>
 
     <div class="view intro-2" id="background" parallax=true
-         style="background: url('/img/background2.jpg') no-repeat center center;
+         style="background: url('https://i.loli.net/2020/03/18/y1SbEo2Hn3mNeqs.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
@@ -133,7 +133,7 @@
                   
                   <span class="post-meta">
                     <i class="far fa-chart-bar"></i>
-                    469 字
+                    601 字
                   </span>
                 
 
@@ -141,7 +141,7 @@
                   
                   <span class="post-meta">
                       <i class="far fa-clock"></i>
-                      1 分钟
+                      2 分钟
                   </span>
                 
 
@@ -170,6 +170,9 @@
             
             <div class="markdown-body">
               <p>Git是目前世界上最先进的分布式版本控制系统（没有之一）。</p>
+<p>为啥不能用摘要</p>
+<a id="more"></a>
+
 <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><pre><code class="bash">$ git init #初始化
 $ git add . #添加全部到仓库,实际上就是把文件修改添加到暂存区
 $ git commit -m &quot;message&quot; #提交信息,实际上就是把暂存区的所有内容提交到当前分支
@@ -182,8 +185,11 @@ $ git checkout -- file #把文件在工作区的修改全部撤销
 $ git rm file #删除一个文件</code></pre>
 <h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><p>工作区就是你在电脑里能看到的目录，工作区有一个隐藏目录<code>.git</code>，这个不算工作区，而是Git的版本库。Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
 <h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><pre><code class="bash">$ git remote add origin URL #添加远程仓库,远程库的名字就是origin
-$ git push -u origin master #把本地库master的内容推送到远程origin
-$ git clone URL #克隆远程到本地</code></pre>
+$ git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt; #推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;
+$ git push origin master #将本地的master分支推送到origin主机的master分支。如果后者不存在则会被新建。
+$ git push origin :master #省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。
+$ git clone URL #克隆远程到本地
+$ git pull &lt;远程主机&gt; &lt;远程分支&gt;:&lt;本地分支&gt; #获取并合并分支</code></pre>
 <h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><pre><code class="bash">$ git checkout -b dev #创建并切换到分支dev
 $ git checkout dev #切换到分支dev
 $ git branch #查看分支
@@ -215,6 +221,8 @@ $ git cherry-pick &lt;commit&gt; #把另外分支提交的修改“复制”到�
                 <i class="iconfont icon-tag"></i>
                     
                       <a class="hover-with-bg" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+                    
+                      <a class="hover-with-bg" href="/tags/git/">git</a>
                     
                   </span>
                 
