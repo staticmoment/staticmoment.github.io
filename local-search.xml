@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2020/03/18/hello-world/"/>
-    <url>/2020/03/18/hello-world/</url>
+    <title>分布式版本控制Git</title>
+    <link href="/2020/fen-bu-shi-ban-ben-kong-zhi-git/"/>
+    <url>/2020/fen-bu-shi-ban-ben-kong-zhi-git/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Git是目前世界上最先进的分布式版本控制系统（没有之一）。</p><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><pre><code class="bash">$ git init #初始化$ git add . #添加全部到仓库,实际上就是把文件修改添加到暂存区$ git commit -m &quot;message&quot; #提交信息,实际上就是把暂存区的所有内容提交到当前分支$ git status #查看仓库状态$ git diff file #查看文件修改内容$ git log #查看历史记录$ git reset --hard HEAD^ #回退版本$ git reflog #查看回退记录$ git checkout -- file #把文件在工作区的修改全部撤销$ git rm file #删除一个文件</code></pre><h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><p>工作区就是你在电脑里能看到的目录，工作区有一个隐藏目录<code>.git</code>，这个不算工作区，而是Git的版本库。Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p><h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><pre><code class="bash">$ git remote add origin URL #添加远程仓库,远程库的名字就是origin$ git push -u origin master #把本地库master的内容推送到远程origin$ git clone URL #克隆远程到本地</code></pre><h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><pre><code class="bash">$ git checkout -b dev #创建并切换到分支dev$ git checkout dev #切换到分支dev$ git branch #查看分支$ git merge dev #合并分支到当前$ git branch -d dev #删除分支 -D强制$ git switch -c dev #创建并切换到分支dev,新命令与checkout区分$ git stash #把当前工作现场“储藏”起来，等以后恢复现场后继续工作：$ git stash apply #恢复不删除$ git stash drop #来删除$ git stash pop #恢复的同时把stash内容也删了$ git stash list #查看$ git cherry-pick &lt;commit&gt; #把另外分支提交的修改“复制”到当前分支</code></pre>]]></content>
     
     
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>工具</tag>
+      
+    </tags>
     
   </entry>
   
