@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>IDEA打jar包</title>
+    <link href="/2020/idea-da-jar-bao/"/>
+    <url>/2020/idea-da-jar-bao/</url>
+    
+    <content type="html"><![CDATA[<h1 id="IDEA打jar包步骤"><a href="#IDEA打jar包步骤" class="headerlink" title="IDEA打jar包步骤"></a>IDEA打jar包步骤</h1><blockquote><p>IntelliJ IDEA 2019.3 (Ultimate Edition)</p><p>java8</p></blockquote><ol><li>选中Java项目工程名称，在菜单中选择 File-&gt;project structure.</li></ol><p><img src="https://s1.ax1x.com/2020/03/26/GplVaj.png" srcset="/img/loading.gif" alt="GplVaj.png"></p><ol start="2"><li><p>在弹出的窗口中左侧选中”Artifacts”，点击”+”选择jar，然后选择”from modules with dependencies”。</p><p><img src="https://s1.ax1x.com/2020/03/26/Gplhy8.png" srcset="/img/loading.gif" alt="Gplhy8.png"></p></li><li><p>配置main class,删除路径后的<code>\main\java</code>并保存.(如果不修改，打成的jar包里没有包含META-INF/MAINFEST.MF文件)</p><p><img src="https://s1.ax1x.com/2020/03/26/GplXlV.png" srcset="/img/loading.gif" alt="GplXlV.png"></p></li><li><p>回到IDEA的主菜单，选择“Build - Build Artifacts”下的“Build”或者“Rebuild”即可生成最终的可运行的jar.</p><p><img src="https://s1.ax1x.com/2020/03/26/Gp1Kkd.png" srcset="/img/loading.gif" alt="Gp1Kkd.png"></p></li></ol><p><img src="https://s1.ax1x.com/2020/03/26/Gp1ojK.png" srcset="/img/loading.gif" alt="Gp1ojK.png"></p><h1 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h1><pre><code class="bash">$ java -jar xxx.jar</code></pre><h1 id="报错没有主清单属性"><a href="#报错没有主清单属性" class="headerlink" title="报错没有主清单属性"></a>报错没有主清单属性</h1><p>因为JAR包中的META-INF文件夹下的MANIFEST.MF文件缺少定义jar接口类,就是缺少默认运行的Main类,步骤3中的路径修改即可。</p><p>也可以手动添加到MANIFEST.MF文件夹</p><p>格式：Main-Class: 包名 类名</p><p>本例：Main-Class: org.springframework.boot.loader.JarLauncher</p><h1 id="编码不一致"><a href="#编码不一致" class="headerlink" title="编码不一致"></a>编码不一致</h1><pre><code>$ java -Dfile.encoding=utf-8 -jar xxx.jar</code></pre><p>-D= # set a system property<br>-D 后面需要跟一个键值对，作用是设置一项系统属性<br>对 -Dfile.encoding=UTF-8 来说就是设置系统属性 file.encoding 为 UTF-8</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>IDEA</tag>
+      
+      <tag>Java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>无题</title>
     <link href="/2020/wu-ti/"/>
     <url>/2020/wu-ti/</url>
